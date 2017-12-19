@@ -16,7 +16,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from . import view
+from ssq import views as ssq_views
 urlpatterns = [
     url(r'^$', view.hello),
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^index/', ssq_views.index),
+    url(r'^admin/', include(admin.site.urls)),
 ]
